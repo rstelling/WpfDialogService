@@ -9,5 +9,6 @@ namespace WpfDialogService
     public interface IDialogService
     {
         void ShowDialogModal(DialogViewModelBase vm);
+        void ShowDialogModeless(DialogViewModelBase vm);
     }
 }

@@ -13,8 +13,20 @@ namespace WpfDialogService
             DialogView v = new DialogView();
             v.Owner = vm.Owner;
             v.DataContext = vm;
+             vm.Modal = true;
             v.ShowDialog();
             v.Owner = null;
         }
+
+        public void ShowDialogModeless(DialogViewModelBase vm)
+        {
+            DialogView v = new DialogView();
+            v.Owner = vm.Owner;
+            v.DataContext = vm;
+            vm.Modal = false;
+            v.Show();
+            v.Owner = null;
+        }
+
     }
 }

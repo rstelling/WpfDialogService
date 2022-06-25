@@ -11,10 +11,23 @@ namespace WpfDialogService
     {
         public Window Owner { get; set; }
 
+        public bool Modal { get; set; }
+
         public void CloseDialog(Window view)
         {
             if (view != null)
-                view.DialogResult = true;
+            {
+                if (Modal)
+                {
+                    view.DialogResult = true;
+                }
+                else
+                {
+                    view.Close();
+                }
+
+ 
+            }
         }
     }
 }

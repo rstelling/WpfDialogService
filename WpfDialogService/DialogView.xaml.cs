@@ -24,5 +24,12 @@ namespace WpfDialogService
         {
             InitializeComponent();
         }
+
+        public event EventHandler WindowClosing = delegate {};
+
+        private void Window_Closing (object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            WindowClosing(sender, e);
+        }
     }
 }

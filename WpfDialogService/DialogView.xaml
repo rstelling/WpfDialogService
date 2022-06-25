@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:WpfDialogService"
         mc:Ignorable="d" 
         d:DesignHeight="300" d:DesignWidth="300"
-        WindowStartupLocation="CenterOwner" SizeToContent="WidthAndHeight">
+        WindowStartupLocation="CenterOwner"
+        SizeToContent="WidthAndHeight" 
+        Closing="Window_Closing"
+        Title="{Binding WindowTitle}" >
     <ContentPresenter x:Name="ContentPresenter" Content="{Binding}"></ContentPresenter>
 </Window>
